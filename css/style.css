@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700;400&display=swap');
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+html,
+body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #000;
+}
+
+/* изменяем курсов */
+* {
+    cursor: url(/img/mouse.svg), auto;
+    cursor: pointer unset;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main {
+    flex: 1 1 auto;
+}
+
+.d-none {
+    display: none;
+}
+
+/* container */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.intro {
+    width: 100%;
+    height: 100vh;
+    /* 100% от высоты экрана */
+    background: url(../img/intro/бассейн.jpg) no-repeat;
+    /* фоновое изображение по центру и без повторений */
+    -webkit-background-size: cover;
+    /* фон занимает всю ширину и высоту блока */
+    background-size: cover;
+    /* фон занимает всю ширину и высоту блока */
+}
+
+/* header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding-top: 15px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header__logo::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 25px;
+
+    background: url(/img/intro/logo_.svg) no-repeat;
+
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+}
+
+.header__nav {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.header__nav a {
+    display: inline-block;
+    margin: 0 25px;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+
+    transition: color 0.3s linear;
+
+    position: relative;
+    z-index: 2;
+}
+
+.header__nav a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.header__nav a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    opacity: 0;
+
+    background-color: #fff;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: all 0.3s ease-out;
+
+}
+
+.header__nav a:hover::after {
+    opacity: 1;
+}
+
+
+/* intro */
+.intro {
+    display: flex;
+    justify-content: center;
+}
+
+.intro__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+}
+
+.intro__suptitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 130px;
+}
+
+.intro__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 79px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+}
+
+.intro__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+.intro__contacts {
+    max-width: 40%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.intro__contacts a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    border: #fff 1px solid;
+    border-radius: 5px;
+    padding: 10px 40px;
+
+    transition: color 0.3s linear;
+}
+
+.intro__contacts a:hover {
+    color: rgba(55, 174, 226, 1);
+    border: rgba(55, 174, 226, 1) 1px solid;
+    text-decoration: none;
+}
+
+/* view */
+.view {
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+    background-color: rgba(55, 53, 61, 1);
+    padding: 55px 0;
+}
+
+.view__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.view__nav {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.view__nav a {
+    color: rgba(153, 156, 169, 1);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0 25px;
+    transition: color 0.3s linear;
+    border: 1px solid rgba(153, 156, 169, 0);
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.view__nav a:hover {
+    border: 1px solid rgba(153, 156, 169, 1);
+    border-radius: 2px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.view__nav a.active {
+    border: 1px solid rgba(153, 156, 169, 1);
+    border-radius: 2px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.view__galery-inner {
+    display: flex;
+}
+
+.view__galery-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.view__galery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* staticstics */
+.staticstics {
+    background-color: rgba(55, 53, 61, 1);
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+    padding-bottom: 40px;
+}
+
+.stat__item {
+    text-align: center;
+    text-transform: capitalize;
+
+    max-width: 200px;
+}
+
+.stat__count {
+    font-family: 'Lora';
+    font-style: normal;
+    font-size: 85px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #fff;
+
+}
+
+.stat__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+    padding-top: 30px;
+    min-width: 220px;
+}
