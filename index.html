@@ -6,6 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Basic stylesheet -->
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#accordion").accordion({
+                heightStyle: "content"
+            });
+        });
+    </script>
     <title>Document</title>
 </head>
 
@@ -77,90 +92,6 @@
                             <img src="img/view/all/house_4.jpg" alt="" class="view__galery-img">
                         </div>
                     </div> <!-- /.view_all -->
-                    <div class="view__galery-inner" id="view_living">
-                        <div class="view__galery-item">
-                            <img src="img/view/living/living_1.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/living/living_2.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/living/living_3.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/living/living_4.jpg" alt="" class="view__galery-img">
-                        </div>
-                    </div> <!-- /.view_living -->
-                    <div class="view__galery-inner" id="view_bed">
-                        <div class="view__galery-item">
-                            <img src="img/view/bed/bed_1.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/bed/bed_2.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/bed/bed_3.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/bed/bed_4.jpg" alt="" class="view__galery-img">
-                        </div>
-                    </div> <!-- /.view_bed -->
-                    <div class="view__galery-inner" id="view_kitchen">
-                        <div class="view__galery-item">
-                            <img src="img/view/kitchen/kitchen_1.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/kitchen/kitchen_2.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/kitchen/kitchen_3.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/kitchen/kitchen_4.jpg" alt="" class="view__galery-img">
-                        </div>
-                    </div> <!-- /.view_kitchen -->
-                    <div class="view__galery-inner" id="view_both">
-                        <div class="view__galery-item">
-                            <img src="img/view/both/both_1.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/both/both_2.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/both/both_3.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/both/both_4.jpg" alt="" class="view__galery-img">
-                        </div>
-                    </div> <!-- /.view_both -->
-                    <div class="view__galery-inner" id="view_pool">
-                        <div class="view__galery-item">
-                            <img src="img/view/pool/pool_1.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/pool/pool_2.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/pool/pool_3.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/pool/pool_4.jpg" alt="" class="view__galery-img">
-                        </div>
-                    </div> <!-- /.view_pool -->
-                    <div class="view__galery-inner" id="view_infrastructure">
-                        <div class="view__galery-item">
-                            <img src="img/view/infrastructure/infrastructure_1.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/infrastructure/infrastructure_2.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/infrastructure/infrastructure_3.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/infrastructure/infrastructure_4.jpg" alt="" class="view__galery-img">
-                        </div>
-                    </div> <!-- /.view_infrastructure -->
                 </div> <!-- /.view__galery-inner -->
             </div> <!-- /.view_galery -->
             <div class="staticstics">
@@ -193,44 +124,128 @@
                     </div>
                     <div class="about__content">
                         <div class="about__item">
-                            <div class="accordion">
-                                <div class="accordion__item active">
-                                    <div class="accordion__header">
-                                        <div class="accordion__title" id="1">Идеальное сочетание</div>
-                                        <img class="accordion__icon" src="/img/accordion_btn.svg" id="1_img">
-                                    </div>
-                                    <div class="accordion__content">Насыщенная яркими событиями курортная жизнь Анталии и спокойный уют тихого квартала средиземноморья дополняют друг друга, создавая неповторимую атмосферу в вашем новом доме и за его пределами.</div>
-                                </div> <!-- /.accordion__item -->
-                                <div class="accordion__item">
-                                    <div class="accordion__header">
-                                        <div class="accordion__title" id="2">Все к вашим услугам</div>
-                                        <img class="accordion__icon" src="/img/accordion_btn.svg"  id="2_img">
-                                    </div>
-                                    <div class="accordion__content">В одной минуте от лучших пляжей всемирно известного курорта. Рестораны, фитнес-клубы, бутики и торговые центры курортной зоны, отвечают европейским стандартам.</div>
-                                </div> <!-- /.accordion__item -->
-                                <div class="accordion__item">
-                                    <div class="accordion__header">
-                                        <div class="accordion__title" id="3">Не индивидуально, а эксклюзивно</div>
-                                        <img class="accordion__icon" src="/img/accordion_btn.svg"  id="3_img">
-                                    </div>
-                                    <div class="accordion__content">Мы основываемся на ваших эксклюзивных требованиях к качеству жизни. Именно поэтому при проектировании и строительстве вилл использовались натуральные строительные и отделочные материалы, отвечающие европейским стандартам качества в сфере экологической безопасности.</div>
-                                </div> <!-- /.accordion__item -->
-                            </div> <!-- /.accordion -->
+                            <div id="accordion">
+                                <div class="accordion__header">
+                                    <h3 class="accordion__title" id="1">Идеальное сочетание</h3>
+                                    <img class="accordion__icon" src="/img/accordion_btn.svg" id="1_img">
+                                </div>
+                                <div class="accordion__content">
+                                    <p>
+                                        Насыщенная яркими событиями курортная жизнь Анталии и спокойный уют тихого
+                                        квартала средиземноморья дополняют друг друга, создавая неповторимую атмосферу в
+                                        вашем новом доме и за его пределами.
+                                    </p>
+                                </div>
+                                <div class="accordion__header">
+                                    <h3 class="accordion__title">Все к вашим услугам</h3>
+                                    <img class="accordion__icon" src="/img/accordion_btn.svg" id="1_img">
+                                </div>
+                                <div class="accordion__content">
+                                    <p>
+                                        В одной минуте от лучших пляжей всемирно известного курорта. Рестораны,
+                                        фитнес-клубы, бутики и торговые центры курортной зоны, отвечают европейским
+                                        стандартам.
+                                    </p>
+                                </div>
+                                <div class="accordion__header">
+                                    <h3 class="accordion__title">Не индивидуально, а эксклюзивно</h3>
+                                    <img class="accordion__icon" src="/img/accordion_btn.svg" id="1_img">
+                                </div>
+                                <div class="accordion__content">
+                                    <p>
+                                        Мы основываемся на ваших эксклюзивных требованиях к качеству жизни. Именно
+                                        поэтому при проектировании и строительстве вилл использовались натуральные
+                                        строительные и отделочные материалы, отвечающие европейским стандартам качества
+                                        в сфере экологической безопасности.
+                                    </p>
+                                </div>
+                            </div>
                         </div> <!-- /.about__item -->
                         <div class="about__item">
                             <div class="about__video">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/1q2w3e4r5t6y" frameborder="0"
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/1q2w3e4r5t6y"
+                                    frameborder="0"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe> 
+                                    allowfullscreen></iframe>
                             </div> <!-- /.about__video -->
                         </div> <!-- /.about__item -->
                     </div> <!-- /.about__content -->
                 </div> <!-- /.container -->
             </section>
+            <section class="presentation">
+                <div class="container">
+                    <div class="presentation__content">
+                        <div class="presentation__title">Получите полную информацию о проекте</div>
+                        <div class="intro__contacts contacts">
+                            <a href="#" class="intro__btn whatsapp">whatsapp</a>
+                            <a href="#" class="intro__btn telegram">telegram</a>
+                        </div>
+                    </div> <!-- /.presentation__content -->
+                </div>
+            </section>
+            <div class="reviews">
+                <div class="container">
+                    <div class="reviews__items">
+                        <div class="reviews__item">
+                            <div class="reviews__title">“Нет сомнения, что Анталья - самое красивое место в мире!”
+                            </div>
+                            <div class="reviews__person">Мустафа Кемаль Ататюрк</div>
+                            <div class="reviews__text">Основатель Турецкой республики</div>
+                        </div>
+                        <div class="reviews__item">
+                            <div class="reviews__title">“Нет сомнения, что Анталья - самое красивое место в мире!”
+                            </div>
+                            <div class="reviews__person">Мустафа Кемаль Ататюрк</div>
+                            <div class="reviews__text">Основатель Турецкой республики</div>
+                        </div>
+                        <div class="reviews__item">
+                            <div class="reviews__title">“Нет сомнения, что Анталья - самое красивое место в мире!”
+                            </div>
+                            <div class="reviews__person">Мустафа Кемаль Ататюрк</div>
+                            <div class="reviews__text">Основатель Турецкой республики</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main> <!-- /.main -->
-        <footer class="footer">Я футер</footer> <!-- /.footer -->
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__header">
+                        <div class="footer__logo">
+                            <img src="/img/footer/team.svg" alt="logo">
+                        </div>
+                        <div class="footer__info">
+                            <h3 class="footer__info-title">Поддержка на всех этапах</h3>
+                            <h3 class="footer__info-sub-title">Онлайн просмотр. Юридическое сопровождение. Счет в банке.
+                                Гражданство.</h3>
+                        </div> <!-- /.footer__info -->
+                        <div class="footer__socials">
+                            <a href="#" class="footer__socials-item telegram"></a>
+                            <a href="#" class="footer__socials-item whatsapp"></a>
+                            <a href="#" class="footer__socials-item instagram"></a>
+                            <a href="#" class="footer__socials-item youtube"></a>
+                        </div> <!-- /.footer__socials -->
+                    </div> <!-- /.footer__header -->
+                </div> <!-- /.footer__content -->
+            </div> <!-- /.container -->
+        </div> <!-- /.footer__top -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__rights">
+                    <div class="footer__rights-text">THE GROUP OF TIGERS © 2023 All Rights Reserved</div>
+                </div>
+            </div>
+        </footer> <!-- /.footer -->
     </div> <!-- /.wrapper -->
     <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#accordion").accordion();
+        });
+    </script>
 </body>
 
 </html>

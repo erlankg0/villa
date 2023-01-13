@@ -1,6 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat:wght@200;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700;400&display=swap');
+
+/* add fonts from fonts*/
+@font-face {
+    font-family: 'Lora';
+    src: url(/fonts/Lora-Bold.woff2) format('woff2'),
+        url(/fonts/Lora-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/fonts/Poppins-Regular.woff) format('woff'),
+        url(/fonts/Poppins-Regular.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(/fonts/OpenSans-Regular.woff) format('woff'),
+        url(/fonts/OpenSans-Regular.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* Указываем box sizing */
 *,
@@ -130,6 +155,7 @@ body {
 .intro {
     width: 100%;
     height: 100vh;
+    min-height: 100hv;
     /* 100% от высоты экрана */
     background: url(../img/intro/бассейн.jpg) no-repeat;
     /* фоновое изображение по центру и без повторений */
@@ -163,7 +189,6 @@ body {
     height: 25px;
 
     background: url(/img/intro/logo_.svg) no-repeat;
-
     position: absolute;
     top: 0px;
     z-index: 1;
@@ -445,15 +470,21 @@ body {
     width: 50%;
     padding-right: 20px;
 }
-.accordion__header{
+
+.accordion__header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-between;
     cursor: pointer;
+    padding: 15px 0;
+    position: relative;
 }
 
+
 .accordion__title {
+    position: absolute;
+    left: 0;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -461,7 +492,6 @@ body {
     line-height: 15px;
     color: rgba(55, 53, 61, 1);
     text-transform: capitalize;
-    padding-bottom: 10px;
 }
 
 .accordion__content {
@@ -474,6 +504,9 @@ body {
     align-items: center;
     line-height: 20px;
     color: rgba(55, 53, 61, 1);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(55, 53, 61, 0.1);
+
 }
 
 .accordion__item {
@@ -481,7 +514,158 @@ body {
     border-bottom: 1px solid rgba(55, 53, 61, 0.1);
 }
 
-.accordion__item.active 
-.accordion__content {
+
+/* presentation */
+
+.presentation {
+    background: url(/img/presentation.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.presentation__content {
     display: flex;
+    flex-direction: column;
+}
+
+.presentation__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    color: #fff;
+    margin-top: 45px;
+}
+
+.contacts {
+    margin-bottom: 35px;
+}
+
+/* reviews */
+.reviews__items {
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.reviews__title {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #37353D;
+    text-align: center;
+}
+
+.reviews__person {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-style: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 15px;
+}
+
+.reviews__text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 200;
+    font-style: 12px;
+    line-height: 15px;
+    text-align: center;
+    margin-top: 15px;
+    color: #4E4A59;
+}
+
+/* footer */
+.footer__top {
+    padding: 40px 0;
+    background-color: rgba(55, 53, 61, 1);
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+}
+.footer__logo{
+    top: 100px;
+    transform: translateY(-100px);
+}
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer__info-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 33px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.footer__info-sub-title {
+    font-family: 'Poppins' sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.footer__socials-item {
+    width: 30px;
+    height: 30px;
+    margin: 30px;
+}
+
+.telegram::before {
+    content: url(/img/footer/social/telegram.svg);
+}
+
+.instagram::before {
+    content: url(/img/footer/social/instagram.svg);
+}
+
+.whatsapp::before {
+    content: url(/img/footer/social/whatsapp.svg);
+}
+
+.youtube::before {
+    content: url(/img/footer/social/youtube.svg);
+}
+
+.footer {
+    background-color: #302E35;
+    height: 50px;
+}
+
+.footer__rights-text {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+
+    color: #999ca9;
+
+    margin: 15px 0;
 }
