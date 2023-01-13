@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700;400&display=swap');
 
@@ -96,6 +96,7 @@ body {
     font-size: 24px;
     line-height: 1.2;
     color: #000;
+    background: #F5F5F5;
 }
 
 /* изменяем курсов */
@@ -122,7 +123,7 @@ body {
 /* container */
 .container {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -393,4 +394,94 @@ body {
     color: #fff;
     padding-top: 30px;
     min-width: 220px;
+}
+
+/* about */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.about__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.left {
+    width: 50%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 33px;
+}
+
+.right {
+    width: 50%;
+    align-self: end;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.about__title {
+    color: #37353D;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: row nowrap;
+}
+
+.about__item {
+    width: 50%;
+    padding-right: 20px;
+}
+.accordion__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+    color: rgba(55, 53, 61, 1);
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+
+.accordion__content {
+    display: none;
+    align-self: start;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    align-items: center;
+    line-height: 20px;
+    color: rgba(55, 53, 61, 1);
+}
+
+.accordion__item {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(55, 53, 61, 0.1);
+}
+
+.accordion__item.active 
+.accordion__content {
+    display: flex;
 }
