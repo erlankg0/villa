@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Basic stylesheet -->
     <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- Default Theme -->
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
@@ -21,7 +24,7 @@
             });
         });
     </script>
-    <title>Document</title>
+    <title>Villa Kadri</title>
 </head>
 
 <body>
@@ -50,8 +53,8 @@
                         <p class="intro__title">Верьте своим глазам</p>
                         <p class="intro__subtitle">650 м2 эксклюзивного пространства для жизни у Средиземного моря</p>
                         <div class="intro__contacts">
-                            <a href="#" class="intro__btn whatsapp">whatsapp</a>
-                            <a href="#" class="intro__btn telegram">telegram</a>
+                            <a href="#" class="intro__btn">whatsapp</a>
+                            <a href="#" class="intro__btn">telegram</a>
                         </div>
                     </div> <!-- /.intro__content -->
                     <div class="intro__img"></div> <!-- /.intro__img -->
@@ -64,13 +67,13 @@
                     <div class="container">
                         <div class="view__header-inner">
                             <nav class="view__nav">
-                                <a href="#" class="view__link" id="all">Все</a>
-                                <a href="#" class="view__link" id="living">Гостиные</a>
-                                <a href="#" class="view__link" id="bed">Спальни</a>
-                                <a href="#" class="view__link" id="kichen">кухни</a>
-                                <a href="#" class="view__link" id="both">ванные</a>
-                                <a href="#" class="view__link" id="pool">бассейн</a>
-                                <a href="#" class="view__link" id="infrastructure">инфраструктура</a>
+                                <a class="view__link" id="all">Все</a>
+                                <a class="view__link" id="living">Гостиные</a>
+                                <a class="view__link" id="bed">Спальни</a>
+                                <a class="view__link" id="kichen">кухни</a>
+                                <a class="view__link" id="both">ванные</a>
+                                <a class="view__link" id="pool">бассейн</a>
+                                <a class="view__link" id="infrastructure">инфраструктура</a>
                             </nav> <!-- /.view__nav -->
                         </div> <!-- /.view__header-inner -->
                     </div> <!-- /.container -->
@@ -78,7 +81,7 @@
             </section> <!-- /.view -->
             <div class="view_galery">
                 <div class="view__galery-images">
-                    <div class="view__galery-inner" id="view_all">
+                    <div class="view__galery-inner" id="view_all" hidden>
                         <div class="view__galery-item">
                             <img src="img/view/all/house_1.jpg" alt="" class="view__galery-img">
                         </div>
@@ -92,6 +95,7 @@
                             <img src="img/view/all/house_4.jpg" alt="" class="view__galery-img">
                         </div>
                     </div> <!-- /.view_all -->
+                    
                 </div> <!-- /.view__galery-inner -->
             </div> <!-- /.view_galery -->
             <div class="staticstics">
@@ -163,10 +167,24 @@
                         </div> <!-- /.about__item -->
                         <div class="about__item">
                             <div class="about__video">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/1q2w3e4r5t6y"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
+                                <div id="poster" >
+                                    <img src="/img/poster/poster.jpg" alt="play">
+                                    <div class="centered">
+                                        <img src="/img/poster/play.svg" alt="play">
+                                    </div>
+                                </div>
+                                <div class="pop_up" id="pop_up">
+                                    <div class="pop_up__content">
+                                        <span class="pop_up__close" id="close">
+                                            X
+                                        </span>
+                                        <div class="pop_up__video">
+                                            <video controls class="video" id="video-player">
+                                                <source src="/video/Нурмат Садыров - Сага.mp4" type="video/mp4">
+                                            </video>
+                                        </div> <!-- /.pop_up__video -->
+                                    </div> <!-- /.pop_up__content -->
+                                </div> <!-- /.pop_up -->
                             </div> <!-- /.about__video -->
                         </div> <!-- /.about__item -->
                     </div> <!-- /.about__content -->
@@ -177,37 +195,43 @@
                     <div class="presentation__content">
                         <div class="presentation__title">Получите полную информацию о проекте</div>
                         <div class="intro__contacts contacts">
-                            <a href="#" class="intro__btn whatsapp">whatsapp</a>
-                            <a href="#" class="intro__btn telegram">telegram</a>
+                            <a href="#" class="intro__btn">whatsapp</a>
+                            <a href="#" class="intro__btn">telegram</a>
                         </div>
                     </div> <!-- /.presentation__content -->
                 </div>
             </section>
-            <div class="reviews">
-                <div class="container">
-                    <div class="reviews__items">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
                         <div class="reviews__item">
                             <div class="reviews__title">“Нет сомнения, что Анталья - самое красивое место в мире!”
                             </div>
                             <div class="reviews__person">Мустафа Кемаль Ататюрк</div>
                             <div class="reviews__text">Основатель Турецкой республики</div>
                         </div>
+                    </div> <!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <div class="reviews__item">
+                            <div class="reviews__title">Ваш дом должен рассказывать о том, кто вы есть, и хранить то,
+                                что вы любите.
+                            </div>
+                            <div class="reviews__person">Нейт Беркус</div>
+                            <div class="reviews__text">Дизайнер интерьеров</div>
+                        </div>
+                    </div> <!-- /.swiper-slide -->
+                    <div class="swiper-slide">
                         <div class="reviews__item">
                             <div class="reviews__title">“Нет сомнения, что Анталья - самое красивое место в мире!”
                             </div>
                             <div class="reviews__person">Мустафа Кемаль Ататюрк</div>
                             <div class="reviews__text">Основатель Турецкой республики</div>
                         </div>
-                        <div class="reviews__item">
-                            <div class="reviews__title">“Нет сомнения, что Анталья - самое красивое место в мире!”
-                            </div>
-                            <div class="reviews__person">Мустафа Кемаль Ататюрк</div>
-                            <div class="reviews__text">Основатель Турецкой республики</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main> <!-- /.main -->
+                    </div> <!-- /.swiper-slide -->
+                </div> <!-- /.swiper-wrapper -->
+                <div class="swiper-pagination"></div>
+            </div> <!-- /.swiper -->
+        </main>
         <div class="footer__top">
             <div class="container">
                 <div class="footer__content">
@@ -244,6 +268,32 @@
     <script>
         $(function () {
             $("#accordion").accordion();
+        });
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 1,
+                    spaceBetween: 50,
+                },
+            }
         });
     </script>
 </body>
