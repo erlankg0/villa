@@ -1,35 +1,59 @@
-// play video on click of video tag in the page 
+// плавное затемнение фона header при скролле
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 100) {
+        $(".header").addClass("header--scroll");
+    } else {
+        $(".header").removeClass("header--scroll");
+    }
+});
 
-$(document).ready(function () {
-    var video = document.getElementById("video-player");
-    video.addEventListener("click", function () {
-        if (video.paused) {
-            video.play();
-            // autoplay video
-            video.controls = true;
-        } else {
-            video.pause();
-            video.controls = false;
+
+const all__view = document.getElementById("all__view");
+const living__view = document.getElementById("living__view");
+const kitchen__view = document.getElementById("kitchen__view");
+const bed__view = document.getElementById("bed__view");
+const bath__view = document.getElementById("bath__view");
+const pool__view = document.getElementById("pool__view");
+const infrastructure__view = document.getElementById("infrastructure__view");
+
+
+// если в классе есть active, то убрать его и добавить style="display: block"
+
+
+const tabs = document.querySelectorAll('.view__link');
+const views = document.querySelectorAll('.view__galery-images');
+
+
+tabs.forEach(function (tab) {
+    tab.addEventListener('click', function (e) {
+        e.preventDefault();
+        let curentTab = tab;
+        
+            
+        let TabId = "view_" + e.target.id // получить id таба и добавить к нему view_  
+        let curentTabId = document.getElementById(TabId);
+        // если tab id = view_all, то  не показать все картинки
+        if (TabId != "view_all") {
+            fuck = document.getElementById("view_all");
+            fuck.style.display = "none";
         }
+    
+        
+        tabs.forEach(function (tab) {
+            tab.classList.remove('active'); // убрать класс active у всех табов 
+        });
+        views.forEach(function (view) {
+            view.style.display = "none"; // убрать style="display: block" в классе с id = view_ + id таба  
+        });
+    
+        
+        curentTab.classList.add('active');
+        curentTabId.style.display = "block"; // добавить style="display: block" в класс с id = view_ + id таба 
+
     });
 });
 
 
-const openPopup = document.getElementById("poster");
-const close = document.getElementById("close");
-const popUp = document.getElementById('pop_up');
-const video = document.getElementById("video-player");
 
-openPopup.addEventListener('click', function (e) {
-    console.log("open");
-    e.preventDefault();
-    popUp.style.display = "block";
-    video.controls = true;
-});
 
-close.addEventListener('click', function (e) {
-    e.preventDefault();
-    popUp.style.display = "none";
-    video.pause();
-    video.controls = false;
-});

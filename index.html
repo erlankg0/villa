@@ -3,12 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
+    <link href="https://itchief.ru//examples/libs/ui-components/itc-slider/itc-slider.css" rel="stylesheet">
+    <script src="https://itchief.ru//examples/libs/ui-components/itc-slider/itc-slider.js" defer></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://themestarz.net/html/propper/assets/css/owl.carousel.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <!-- Basic stylesheet -->
     <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+            console.log($("#tabs").tabs());
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
@@ -24,6 +36,7 @@
             });
         });
     </script>
+
     <title>Villa Kadri</title>
 </head>
 
@@ -34,18 +47,18 @@
                 <div class="header__inner">
                     <div class="header__logo"></div> <!-- /.header__logo -->
                     <nav class="header__nav">
-                        <a href="#" class="header__link">Главная</a>
+                        <a href="#main" class="header__link">Главная</a>
 
-                        <a href="#" class="header__link">Галерея</a>
+                        <a href="#gallery"" class=" header__link">Галерея</a>
 
-                        <a href="#" class="header__link">О проекте</a>
+                        <a href="#about" class="header__link">О проекте</a>
 
-                        <a href="#" class="header__link">Контакты</a>
+                        <a href="#contacts" class="header__link">Контакты</a>
                     </nav> <!-- /.header__nav -->
                 </div> <!-- /.header__inner -->
             </div> <!-- /.container -->
         </header> <!-- /.header -->
-        <div class="intro">
+        <div class="intro" id="main">
             <div class="container">
                 <div class="intro__inner">
                     <div class="intro__content">
@@ -62,65 +75,371 @@
             </div>
         </div> <!-- /.intro -->
         <main class="main">
-            <section class="view">
-                <div class="view__header">
+            <div class="section">
+                <div class="view" id="gallery">
+                    <div class="view__header">
+                        <div class="container">
+                            <div class="view__header-inner">
+                                <nav class="view__nav tabs">
+                                    <a class="view__link" id="all">Все</a>
+                                    <a class="view__link" id="living">Гостиные</a>
+                                    <a class="view__link" id="bed">Спальни</a>
+                                    <a class="view__link" id="kitchen">кухни</a>
+                                    <a class="view__link" id="both">ванные</a>
+                                    <a class="view__link" id="pool">бассейн</a>
+                                    <a class="view__link" id="infrastructure">инфраструктура</a>
+                                </nav> <!-- /.view__nav -->
+                            </div> <!-- /.view__header-inner -->
+                        </div>
+                    </div> <!-- /.view__header -->
+                </div>
+                <div id="tabs">
+                    <div class="itc-slider" data-autoplay="true" data-interval="7000" data-loop="true"
+                        data-slider="itc-slider" id="view_all">
+                        <div class="itc-slider__wrapper">
+                            <div class="itc-slider__items">
+                                <div class="itc-slider__item">
+                                    <div class="view__galery-imgs">
+                                        <div class="view__galery-inner">
+                                            <div class="view__galery-item">
+                                                <img src="img/view/all/house_1.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/all/house_2.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/all/house_3.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/all/house_4.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                        </div> <!-- /.view_all -->
+                                    </div> <!-- /.view__galery-inner -->
+                                </div>
+                                <div class="itc-slider__item">
+                                    <div class="view__galery-imgs">
+                                        <div class="view__galery-inner">
+                                            <div class="view__galery-item">
+                                                <img src="img/view/living/living_1.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/living/living_2.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/living/living_3.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/living/living_4.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                        </div> <!-- /.view_living -->
+                                    </div> <!-- /.view__galery-inner -->
+                                </div>
+                                <div class="itc-slider__item">
+                                    <div class="view__galery-imgs">
+                                        <div class="view__galery-inner">
+                                            <div class="view__galery-item">
+                                                <img src="img/view/bed/bed_1.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/bed/bed_2.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/bed/bed_3.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/bed/bed_4.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                        </div> <!-- /.view_bed -->
+                                    </div> <!-- /.view__galery-inner -->
+                                </div>
+                                <div class="itc-slider__item">
+                                    <div class="view__galery-imgs">
+                                        <div class="view__galery-inner">
+                                            <div class="view__galery-item">
+                                                <img src="img/view/kitchen/kitchen_1.jpg" alt=""
+                                                    class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/kitchen/kitchen_2.jpg" alt=""
+                                                    class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/kitchen/kitchen_3.jpg" alt=""
+                                                    class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/kitchen/kitchen_4.jpg" alt=""
+                                                    class="view__galery-img">
+                                            </div>
+                                        </div> <!-- /.view_kichen -->
+                                    </div> <!-- /.view__galery-inner -->
+                                </div>
+                                <div class="itc-slider__item">
+                                    <div class="view__galery-imgs">
+                                        <div class="view__galery-inner">
+                                            <div class="view__galery-item">
+                                                <img src="img/view/both/both_1.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/both/both_2.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/both/both_3.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/both/both_4.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                        </div> <!-- /.view_both -->
+                                    </div> <!-- /.view__galery-inner -->
+                                </div>
+                                <div class="itc-slider__item">
+                                    <div class="view__galery-imgs">
+                                        <div class="view__galery-inner">
+                                            <div class="view__galery-item">
+                                                <img src="img/view/pool/pool_1.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/pool/pool_2.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/pool/pool_3.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/pool/pool_4.jpg" alt="" class="view__galery-img">
+                                            </div>
+                                        </div> <!-- /.view_pool -->
+                                    </div> <!-- /.view__galery-inner -->
+                                </div>
+                                <div class="itc-slider__item">
+                                    <div class="view__galery-imgs">
+                                        <div class="view__galery-inner">
+                                            <div class="view__galery-item">
+                                                <img src="img/view/infrastructure/infrastructure_1.jpg" alt=""
+                                                    class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/infrastructure/infrastructure_2.jpg" alt=""
+                                                    class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/infrastructure/infrastructure_3.jpg" alt=""
+                                                    class="view__galery-img">
+                                            </div>
+                                            <div class="view__galery-item">
+                                                <img src="img/view/infrastructure/infrastructure_4.jpg" alt=""
+                                                    class="view__galery-img">
+                                            </div>
+                                        </div> <!-- /.view_infrastructure -->
+                                    </div> <!-- /.view__galery-inner -->
+                                </div>
+                            </div> <!-- /.itc-slider -->
+                        </div>
+                    </div>
+                    <div class="gallery">
+                        <div class="view__galery-images tabs_select" id="view_living" style="display: none;">
+                            <div class="view__galery-inner">
+                                <div class="view__galery-item">
+                                    <a href="img/view/living/living_1.jpg" data-lightbox="living"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/living/living_1.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/living/living_2.jpg" data-lightbox="living"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/living/living_2.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/living/living_3.jpg" data-lightbox="living"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/living/living_3.jpg" alt="" class="view__galery-img">
+                                    </a>
+
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/living/living_4.jpg" data-lightbox="living"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/living/living_4.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                            </div> <!-- /.view_living -->
+                        </div> <!-- /.view__galery-inner -->
+                        <div class="view__galery-images tabs_select" id="view_bed" style="display: none;">
+                            <div class="view__galery-inner">
+                                <div class="view__galery-item">
+                                    <a href="img/view/bed/bed_1.jpg" data-lightbox="bed"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/bed/bed_1.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/bed/bed_2.jpg" data-lightbox="bed"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/bed/bed_2.jpg" alt="" class="view__galery-img">
+                                    </a>
+
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/bed/bed_3.jpg" data-lightbox="bed"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/bed/bed_3.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/bed/bed_4.jpg" data-lightbox="bed"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/bed/bed_4.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                            </div> <!-- /.view_bed -->
+                        </div> <!-- /.view__galery-inner -->
+                        <div class="view__galery-images tabs_select" id="view_kitchen" style="display: none;">
+                            <div class="view__galery-inner">
+                                <div class="view__galery-item">
+                                    <a href="img/view/kitchen/kitchen_1.jpg" data-lightbox="kitchen"
+                                        style="height: 100%;width: 100%;">
+                                        <img src="img/view/kitchen/kitchen_1.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/kitchen/kitchen_2.jpg" data-lightbox="kitchen"
+                                        style="height: 100%;width: 100%;">
+                                        <img src="img/view/kitchen/kitchen_2.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/kitchen/kitchen_3.jpg" data-lightbox="kitchen"
+                                        style="height: 100%;width: 100%;">
+                                        <img src="img/view/kitchen/kitchen_3.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/kitchen/kitchen_4.jpg" data-lightbox="kitchen"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/kitchen/kitchen_4.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                            </div> <!-- /.view_kichen -->
+                        </div> <!-- /.view__galery-inner -->
+                        <div class="view__galery-images tabs_select" id="view_both" style="display: none;">
+                            <div class="view__galery-inner">
+                                <div class="view__galery-item">
+                                    <a href="img/view/both/both_1.jpg" data-lightbox="both"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/both/both_1.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+
+                                    <a href="img/view/both/both_2.jpg" data-lightbox="both"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/both/both_2.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+
+                                    <a href="img/view/both/both_3.jpg" data-lightbox="both"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/both/both_3.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+
+                                    <a href="img/view/both/both_4.jpg" data-lightbox="both"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/both/both_4.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                            </div> <!-- /.view_both -->
+                        </div> <!-- /.view__galery-inner -->
+                        <div class="view__galery-images tabs_select" id="view_pool" style="display: none;">
+                            <div class="view__galery-inner">
+                                <div class="view__galery-item">
+                                    <a href="img/view/pool/pool_1.jpg" data-lightbox="pool"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/pool/pool_1.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/pool/pool_2.jpg" data-lightbox="pool"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/pool/pool_2.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/pool/pool_3.jpg" data-lightbox="pool"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/pool/pool_3.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/pool/pool_4.jpg" data-lightbox="pool"
+                                        style="height: 100%; width: 100%;">
+                                        <img src="img/view/pool/pool_4.jpg" alt="" class="view__galery-img">
+                                    </a>
+                                </div>
+                            </div> <!-- /.view_pool -->
+                        </div> <!-- /.view__galery-inner -->
+                        <div class="view__galery-images tabs_select" id="view_infrastructure" style="display: none;">
+                            <div class="view__galery-inner">
+                                <div class="view__galery-item">
+                                    <a href="img/view/infrastructure/infrastructure_1.jpg"
+                                        data-lightbox="infrastructure" style="height: 100%; width: 100%;">
+                                        <img src="img/view/infrastructure/infrastructure_1.jpg" alt=""
+                                            class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/infrastructure/infrastructure_2.jpg"
+                                        data-lightbox="infrastructure" style="height: 100%; width: 100%;">
+                                        <img src="img/view/infrastructure/infrastructure_2.jpg" alt=""
+                                            class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/infrastructure/infrastructure_3.jpg"
+                                        data-lightbox="infrastructure" style="height: 100%; width: 100%;">
+                                        <img src="img/view/infrastructure/infrastructure_3.jpg" alt=""
+                                            class="view__galery-img">
+                                    </a>
+                                </div>
+                                <div class="view__galery-item">
+                                    <a href="img/view/infrastructure/infrastructure_4.jpg"
+                                        data-lightbox="infrastructure" style="height: 100%; width: 100%;">
+                                        <img src="img/view/infrastructure/infrastructure_4.jpg" alt=""
+                                            class="view__galery-img">
+                                    </a>
+                                </div>
+                            </div> <!-- /.view_infrastructure -->
+                        </div> <!-- /.view__galery-inner -->
+                    </div>
+                </div>
+
+                <div class="staticstics" style="top: -20px; transform: translateY(-20px);">
                     <div class="container">
-                        <div class="view__header-inner">
-                            <nav class="view__nav">
-                                <a class="view__link" id="all">Все</a>
-                                <a class="view__link" id="living">Гостиные</a>
-                                <a class="view__link" id="bed">Спальни</a>
-                                <a class="view__link" id="kichen">кухни</a>
-                                <a class="view__link" id="both">ванные</a>
-                                <a class="view__link" id="pool">бассейн</a>
-                                <a class="view__link" id="infrastructure">инфраструктура</a>
-                            </nav> <!-- /.view__nav -->
-                        </div> <!-- /.view__header-inner -->
+                        <div class="stat">
+                            <div class="stat__item">
+                                <div class="stat__count">5</div>
+                                <div class="stat__text">спален</div>
+                            </div>
+                            <div class="stat__item">
+                                <div class="stat__count">2</div>
+                                <div class="stat__text">Гостиные</div>
+                            </div>
+                            <div class="stat__item">
+                                <div class="stat__count">4</div>
+                                <div class="stat__text">ванные комнаты</div>
+                            </div>
+                            <div class="stat__item">
+                                <div class="stat__count">2</div>
+                                <div class="stat__text">американские кухни</div>
+                            </div>
+                        </div> <!-- /.stat -->
                     </div> <!-- /.container -->
-                </div> <!-- /.view__header -->
-            </section> <!-- /.view -->
-            <div class="view_galery">
-                <div class="view__galery-images">
-                    <div class="view__galery-inner" id="view_all" hidden>
-                        <div class="view__galery-item">
-                            <img src="img/view/all/house_1.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/all/house_2.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/all/house_3.jpg" alt="" class="view__galery-img">
-                        </div>
-                        <div class="view__galery-item">
-                            <img src="img/view/all/house_4.jpg" alt="" class="view__galery-img">
-                        </div>
-                    </div> <!-- /.view_all -->
-                    
-                </div> <!-- /.view__galery-inner -->
-            </div> <!-- /.view_galery -->
-            <div class="staticstics">
-                <div class="container">
-                    <div class="stat">
-                        <div class="stat__item">
-                            <div class="stat__count">5</div>
-                            <div class="stat__text">спален</div>
-                        </div>
-                        <div class="stat__item">
-                            <div class="stat__count">2</div>
-                            <div class="stat__text">Гостиные</div>
-                        </div>
-                        <div class="stat__item">
-                            <div class="stat__count">4</div>
-                            <div class="stat__text">ванные комнаты</div>
-                        </div>
-                        <div class="stat__item">
-                            <div class="stat__count">2</div>
-                            <div class="stat__text">американские кухни</div>
-                        </div>
-                    </div> <!-- /.stat -->
-                </div> <!-- /.container -->
-            </div> <!-- /.staticstics -->
-            <section class="about">
+                </div> <!-- /.staticstics -->
+            </div>
+            <section class="about" id="about">
                 <div class="container">
                     <div class="about__header">
                         <div class="about__title left">О проекте</div>
@@ -167,30 +486,20 @@
                         </div> <!-- /.about__item -->
                         <div class="about__item">
                             <div class="about__video">
-                                <div id="poster" >
-                                    <img src="/img/poster/poster.jpg" alt="play">
-                                    <div class="centered">
-                                        <img src="/img/poster/play.svg" alt="play">
-                                    </div>
+                                <div id="poster">
+                                    <a href="/video/Нурмат Садыров - Сага.mp4" data-fslightbox="video">
+                                        <img src="/img/poster/poster.jpg" alt="play">
+                                        <div class="centered">
+                                            <img src="/img/poster/play.svg" alt="play">
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="pop_up" id="pop_up">
-                                    <div class="pop_up__content">
-                                        <span class="pop_up__close" id="close">
-                                            X
-                                        </span>
-                                        <div class="pop_up__video">
-                                            <video controls class="video" id="video-player">
-                                                <source src="/video/Нурмат Садыров - Сага.mp4" type="video/mp4">
-                                            </video>
-                                        </div> <!-- /.pop_up__video -->
-                                    </div> <!-- /.pop_up__content -->
-                                </div> <!-- /.pop_up -->
                             </div> <!-- /.about__video -->
                         </div> <!-- /.about__item -->
                     </div> <!-- /.about__content -->
                 </div> <!-- /.container -->
             </section>
-            <section class="presentation">
+            <section class="presentation" id="contacts">
                 <div class="container">
                     <div class="presentation__content">
                         <div class="presentation__title">Получите полную информацию о проекте</div>
@@ -265,6 +574,8 @@
     <script src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/lightbox.js" type="text/javascript"></script>
+    <script src="js/fslightbox.js"></script>
     <script>
         $(function () {
             $("#accordion").accordion();
@@ -295,6 +606,7 @@
                 },
             }
         });
+
     </script>
 </body>
 
