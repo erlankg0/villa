@@ -26,6 +26,7 @@ const tabs = document.querySelectorAll('.view__link');
 const views = document.querySelectorAll('.view__galery-images');
 
 
+
 tabs.forEach(function (tab) {
     tab.addEventListener('click', function (e) {
         e.preventDefault();
@@ -36,6 +37,8 @@ tabs.forEach(function (tab) {
         let curentTabId = document.getElementById(TabId);
         // если tab id = view_all, то  не показать все картинки
         if (e.target.id != "all") {
+            
+
             if (window.innerWidth < 660) {
                 fuck = document.getElementById("view_all_mobile");
                 fuck.style.display = "none";
@@ -46,6 +49,7 @@ tabs.forEach(function (tab) {
             }
         }
         else {
+           
             if (window.innerWidth < 960) {
                 fuck = document.getElementById("view_all_mobile");
                 fuck.style.display = "block";
@@ -89,3 +93,4 @@ nav_toggle.addEventListener('click', function (e) {
         nav_toggle.slideToggle(300);
     }
 });
+

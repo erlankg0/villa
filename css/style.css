@@ -346,8 +346,8 @@ html {
 .intro__suptitle {
     font-family: 'Montserrat';
     font-style: normal;
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 700;
     line-height: 22px;
     margin-top: 130px;
 }
@@ -372,7 +372,7 @@ html {
 }
 
 .intro__contacts {
-    max-width: 40%;
+    max-width: 35%;
     display: flex;
     flex-direction: row;
     margin-top: 40px;
@@ -518,15 +518,17 @@ html {
 .stat {
     display: flex;
     justify-content: space-between;
-    padding-top: 90px;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    text-align: center;
+    align-items: center;
 }
 
 .stat__item {
     text-align: center;
     text-transform: capitalize;
-
-    max-width: 200px;
+    max-width: 25%;
+    text-align: center;
 }
 
 .stat__count {
@@ -542,12 +544,12 @@ html {
 .stat__text {
     font-family: 'Montserrat';
     font-style: normal;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 16px;
     color: #fff;
-    padding-top: 30px;
-    min-width: 220px;
+    padding-top: 50px;
+    min-width: 25%;
 }
 
 /* about */
@@ -591,6 +593,15 @@ html {
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
+}
+.about__video-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    padding-top: 20px;
+    opacity: 0.5;
 }
 
 
@@ -876,8 +887,51 @@ html {
     background-color: rgba(55, 53, 61, 1);
 }
 
+.desktop_{
+    display: flex;
+}
+#desktop_living{
+    display: flex;
+}
+#desktop_kitchen{
+    display: flex;
+}
+#desktop_bed{
+    display: flex;
+}
+#desktop_bath{
+    display: flex;
+}
+#desktop_pool{
+    display: flex;
+}
+#desktop_infrastructure{
+    display: flex;
+}
+#mobile_living{
+    display: none;
+}
+#mobile_kitchen{
+    display: none;
+}
+#mobile_bed{
+    display: none;
+}
+#mobile_bath{
+    display: none;
+}
+#mobile_pool{
+    display: none;
+}
+#mobile_infrastructure{
+    display: none;
+}
 /* ------------------------------------ media ---------------------------------------------- */
-
+@media(max-width:1440px){
+    .intro__contacts {
+        width: 35%;
+    }
+}
 
 @media(max-width: 1230px) {
     .intro__title {
@@ -887,6 +941,10 @@ html {
 
     .intro__subtitle {
         font-size: 20px;
+    }
+
+    .intro__contacts {
+        width: 35%;
     }
 
     .intro__contacts a {
@@ -905,6 +963,35 @@ html {
 }
 
 @media(max-width: 970px) {
+    .intro__title {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .intro__subtitle {
+        font-size: 18px;
+    }
+
+    .intro__contacts a {
+        padding: 15px 30px;
+    }
+
+    .stat__item {
+        min-width: 200px;
+    }
+
+    .stat__count {
+        font-size: 60px;
+        line-height: 30px;
+    }
+
+    .intro__contacts a {
+        padding: 15px 25px;
+    }
+
+}
+
+@media(max-width: 1024px) {
     .intro__title {
         font-size: 50px;
         line-height: 60px;
@@ -955,6 +1042,9 @@ html {
     .header__nav.active {
         display: block;
     }
+    .intro__contacts {
+        max-width: 33%;
+    }
 
 
     .header__nav a {
@@ -992,12 +1082,12 @@ html {
     }
 
     .stat__count {
-        font-size: 50px;
+        font-size: 80px;
         line-height: 20px;
     }
 
     .stat__title {
-        font-size: 14px;
+        font-size: 27px;
     }
 
     .stat__text {
@@ -1090,6 +1180,44 @@ html {
 }
 
 @media(max-width: 660px) {
+
+    #desktop_living{    
+        display: none;
+    }
+    #desktop_bed{    
+        display: none;
+    }
+    #desktop_bath{    
+        display: none;
+    }
+    #desktop_kitchen{    
+        display: none;
+    }
+    #desktop_pool{    
+        display: none;
+    }
+    #desktop_infrastructure{   
+        display: none;
+    }
+    #mobile_living{    
+        display: block;
+    }
+    #mobile_bed{    
+        display: block;
+    }
+    #mobile_bath{    
+        display: block;
+    }
+    #mobile_kitchen{    
+        display: block;
+    }
+    #mobile_pool{    
+        display: block;
+    }
+    #mobile_infrastructure{    
+        display: block;
+    }
+    
     .intro__title {
         font-size: 40px;
         line-height: 50px;
@@ -1099,13 +1227,15 @@ html {
         font-size: 16px;
     }
 
+
     .intro__contacts {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
+        justify-content: flex-start;
         margin: 10px;
     }
-
+    
 
     .intro__contacts a {
         margin: 10px;
@@ -1125,7 +1255,9 @@ html {
 
     .stat__item {
         min-width: 100%;
-        margin: 10px;
+        margin: 25px;
+        text-align: center;
+        align-items: center;
     }
 
     .about__content {
